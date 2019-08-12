@@ -1,2 +1,2 @@
 # specialevents-redesign
- UCSC Special Events redesign
+ UC Santa Cruz Special Events
