@@ -121,10 +121,25 @@
         <div class="grid-container large">
             <div class="grid-x large-padding-collapse large-margin-collapse">
                 <div class="cell large-3">
-                    {{>news-logo}}
+                    {{>specialevents-logo}}
                 </div>
                 <div class="cell auto">
                     {{>specialevents-menu}}
+                </div>
+            </div>
+        </div>
+       
+    {{/ifpage}}
+
+    {{#ifpage 'template-landing-v2'}}
+        
+        <div class="grid-container large">
+            <div class="grid-x large-padding-collapse large-margin-collapse">
+                <div class="cell large-3">
+                    {{>specialevents-title}}
+                </div>
+                <div class="cell auto">
+                    {{>specialevents-landing-v2}}
                 </div>
             </div>
         </div>
