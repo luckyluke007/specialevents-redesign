@@ -23,7 +23,7 @@
     margin-left: 0;
     display: none;
 
-    @include breakpoint(large) {
+    @include breakpoint(xlarge) {
         background-color: #ffffff;
         display: block;
     }
