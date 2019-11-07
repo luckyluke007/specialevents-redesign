@@ -20,6 +20,7 @@ UNCSS_OPTIONS:
 PATHS:
   # Path to doc folder
   dist: "docs"
+
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"

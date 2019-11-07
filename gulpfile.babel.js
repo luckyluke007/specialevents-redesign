@@ -31,6 +31,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
+
 gulp.task('build',
  gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, styleGuide));
 
@@ -171,3 +172,15 @@ function watch() {
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload));
 }
+
+var pkg = require('./package.json')
+
+gulp.task('specialevents-css', function () {
+  return gulp.src('./docs/assets/css/custom.css')
+    .pipe(gulp.dest(pkg.directories.specialevents))
+});
+
+gulp.task('specialevents-js', function () {
+  return gulp.src(['./docs/assets/js/app.js','./docs/assets/js/app.js.map'])
+    .pipe(gulp.dest(pkg.directories.specialeventsjs))
+});
